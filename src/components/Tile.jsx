@@ -1,8 +1,12 @@
 import React from "react";
 
-function Tile({id, onClick}){
+function Tile({x,y, onClick, state}){
     return(
-        <div onClick={()=>(onClick(id))} className="bg-gray-500 w-full aspect-square shadow-lg rounded-lg mb-2"></div>
+        <div onClick={()=>(onClick({x,y,state}))} className="bg-gray-500 w-full aspect-square shadow-lg rounded-lg mb-2">
+            <p>
+                {state}
+            </p>
+        </div>
 
     )
 }

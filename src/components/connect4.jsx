@@ -6,12 +6,12 @@ import { useState } from "react";
 function Connect4(){
     const [gameState,setGameState] = useState(new Array(7).fill(new Array(6).fill("")));
 
-    const handleTileClick = (id) =>{
-        console.log(id,idToCoord(id));
+    const handleTileClick = (coordinate) =>{
+        console.log(gameState[coordinate.x][coordinate.y])
+        const newState = [...gameState];
+        newState[coordinate.y][coordinate.x] = "HELLO";
+        setGameState(newState);
     }
-
-    
-    const idToCoord = (id) => ({x: id % 7,y: Math.floor(id / 7)});
 
     return(
         <div className="w-full sm:w-[640px] bg-gray-800 aspect-square rounded-lg shadow-lg p-2">
