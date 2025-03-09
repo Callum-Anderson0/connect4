@@ -8,7 +8,7 @@ function Board({gameState, handleTileClick}){
             {gameState.map((column,colIndex) => (
                 <div className="bg-gray-700 h-full ">
                     {column.map((value,rowIndex) => (
-                        <Tile onClick={handleTileClick} x={colIndex} y={rowIndex} state={gameState[colIndex][rowIndex]}>
+                        <Tile onClick={handleTileClick} key={rowIndex*7+colIndex} x={colIndex} y={rowIndex} state={gameState[colIndex][rowIndex]}>
                         </Tile>))
                     }
                 </div>))
