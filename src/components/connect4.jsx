@@ -41,9 +41,7 @@ function Connect4(){
                 <h1 className="text-gray-200">CONNECT 4</h1>
             </div>
             <Board gameState={gameState} handleTileClick={handleTileClick}></Board>
-            <div className="flex justify-center bg-gray-700 sm:w-full rounded-lg mt-2 p-2 gap-2 shadow-lg">
-                
-            </div>
+            
             <button onClick={handleReset} className="w-full bg-gray-700 text-center rounded-lg mt-2 p-2 text-gray-200">
                 RESET
             </button>
